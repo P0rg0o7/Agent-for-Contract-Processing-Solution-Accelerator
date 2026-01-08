@@ -1,0 +1,282 @@
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #1d1d1f;
+  background: #f8f8fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.8rem);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  margin: 0;
+  color: #5b5b67;
+}
+
+.subtitle {
+  margin: 0;
+  color: #444;
+}
+
+.toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: 24px;
+}
+
+.worksheet {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hat-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.hat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 6px solid;
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+
+.hat-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.hat-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.hat-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: #2f2f34;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd0dd;
+  background: #fafafa;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #2d6cdf;
+  border-color: transparent;
+}
+
+.missing input {
+  border-color: #e24a4a;
+  background: #fff5f5;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+}
+
+.checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.panel-actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  font: inherit;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: #2d6cdf;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #e8ecf7;
+  color: #2d3a52;
+}
+
+button.ghost {
+  background: transparent;
+  color: #2d6cdf;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.prompt-text {
+  white-space: pre-wrap;
+}
+
+.prompt-negative {
+  margin: 0;
+  color: #5b5b67;
+}
+
+.warnings {
+  margin: 0;
+  padding-left: 18px;
+  color: #c75100;
+}
+
+.status-text {
+  margin: 0;
+  color: #5b5b67;
+}
+
+.error-text {
+  color: #c00000;
+  margin: 0;
+}
+
+.image-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.image-preview img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e0e3ea;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.missing-panel {
+  background: #fff7e6;
+  border: 1px solid #ffd39b;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.missing-panel h3 {
+  margin-top: 0;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #5b5b67;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
